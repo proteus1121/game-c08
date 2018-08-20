@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-	
-    <parent>
-        <groupId>org.lwjglb</groupId>
-        <artifactId>book</artifactId>
-        <version>1.0</version>
-    </parent>
+
+    <groupId>org.lwjglb</groupId>
+    <artifactId>book</artifactId>
+    <version>1.0</version>
 
     <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <lwjgl.version>3.1.6</lwjgl.version>
+        <joml.version>1.9.9</joml.version>
+        <pngdecoder.version>1.0</pngdecoder.version>
+        <native.target>natives-windows</native.target>
     </properties>
 
     <build>
@@ -26,9 +29,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <artifactId>game-c08</artifactId>
-    <version>1.0</version>
 
     <dependencies>
         <dependency>
@@ -56,28 +56,28 @@
             <artifactId>pngdecoder</artifactId>
             <version>${pngdecoder.version}</version>
         </dependency>
-		
-		<!-- Natives -->
+
+        <!-- Natives -->
         <dependency>
             <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl</artifactId>
             <version>${lwjgl.version}</version>
             <classifier>${native.target}</classifier>
-			<scope>runtime</scope>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-glfw</artifactId>
             <version>${lwjgl.version}</version>
             <classifier>${native.target}</classifier>
-			<scope>runtime</scope>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-opengl</artifactId>
             <version>${lwjgl.version}</version>
             <classifier>${native.target}</classifier>
-			<scope>runtime</scope>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -96,5 +96,5 @@
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
-    </dependencies>	
+    </dependencies>
 </project>
